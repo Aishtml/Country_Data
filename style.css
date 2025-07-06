@@ -1,0 +1,141 @@
+:root {
+    --Blue-900: hsl(209, 23%, 22%);
+    --Blue-950: hsl(207, 26%, 17%);
+    --Grey-950: hsl(200, 15%, 8%);
+    --Grey-400: hsl(0, 0%, 50%);
+    --Grey-50: hsl(0, 0%, 99%);
+    --White: hsl(0, 100%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
+    background-color: var(--Blue-950);
+    color: var(--White);
+}
+
+.hero--section,
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero {
+    background-color: var(--Blue-900);
+    box-shadow: 0 0 10px var(--Grey-950);
+    margin-bottom: 2em;
+    padding-block: 1.5em;
+}
+
+.hero--section,
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero--section__toggle,
+.search-section--search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.hero--section__toggle i,
+.hero--section__toggle p {
+    cursor: pointer;
+}
+
+.search-section--search-bar {
+    width: 30%;
+}
+
+.search-section--filter {
+    width: 10%;
+}
+
+.search-section--search-bar input,
+#regions {
+    width: 100%;
+    background-color: var(--Blue-900);
+    border: none;
+    padding-block: 1.3em;
+    padding-inline: 1em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    color: var(--White);
+    box-shadow: 1px 1px 10px var(--Grey-950);
+}
+
+.search-section--search-bar input {
+    position: relative;
+}
+
+.search-section--search-bar input::placeholder {
+    color: var(--White);
+    padding-left: 2.5em;
+}
+
+.search-section--search-bar i {
+    position: absolute;
+    top: 13%;
+    left: 11%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.grid--child {
+    width: 100%;
+    box-shadow: 1px 1px 10px var(--Grey-950);
+    border-radius: 5px;
+    padding-bottom: 2em;
+    animation: fade 2s;
+}
+
+.grid--child img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+
+.grid--child h2 {
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+}
+
+.grid--child p {
+   line-height: 2em;
+    padding-left: 0.5em;
+}
+.gif {
+    width: 100%;
+    height: 100vh;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
