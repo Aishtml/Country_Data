@@ -86,8 +86,8 @@ body {
 
 .search-section--search-bar i {
     position: absolute;
-    top: 22%;
-    left: 12%;
+    top: 20%;
+    left: 12.5%;
     z-index: 1;
     cursor: pointer;
 }
@@ -181,6 +181,14 @@ line-height: 2em;
         aspect-ratio: 1;
         object-fit: cover;
     }
+
+    .search-section--search-bar i {
+        position: absolute;
+        top: 14%;
+        left: 12.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 50em) {
@@ -202,6 +210,14 @@ line-height: 2em;
     .search-section--filter {
         width: 30%;
     }
+
+    .search-section--search-bar i {
+        position: absolute;
+        top: 13%;
+        left: 12.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
 }
 
 @media (min-width: 70em) {
@@ -218,5 +234,13 @@ line-height: 2em;
 
     .search-section--filter {
         width: 20%;
+    }
+
+    .search-section--search-bar i {
+        position: absolute;
+        top: 19.2%;
+        left: 12%;
+        z-index: 1;
+        cursor: pointer;
     }
 }
