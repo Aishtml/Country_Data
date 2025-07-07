@@ -60,7 +60,7 @@
         const html =
         `
             <div class="grid--child">
-                <img src=${data.flags.png} />
+                <img src=${data.flags.png} alt="Countries flag" />
                 <h2>${data.name}</h2>
                 <p>Population: ${data.population}</p>
                 <p>Region: ${data.region}</p>
