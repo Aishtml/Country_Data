@@ -41,7 +41,88 @@ body {
     align-items: center;
 }
 
-@media (min-width: 40rem) {
+.hero--section h1 {
+    font-size: 1rem;
+}
+
+.hero--section__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.search-section--search-bar input,
+#regions {
+    width: 100%;
+    background-color: var(--Blue-900);
+    border: none;
+    padding-block: 1.3em;
+    padding-inline: 1em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    color: var(--White);
+    box-shadow: 1px 1px 10px var(--Grey-950);
+}
+
+.search-section--search-bar {
+    width: 100%;
+}
+
+.search-section--filter {
+    width: 50%;
+}
+
+.search-section--search-bar input::placeholder,
+.search-section--search-bar input {
+    color: var(--White);
+    padding-left: 2.5em;
+}
+
+.search-section--search-bar i {
+    position: absolute;
+    top: 22%;
+    left: 12%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.grid--child {
+    width: 100%;
+    box-shadow: 1px 1px 10px var(--Grey-950);
+    border-radius: 5px;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    animation: fade 2s;
+}
+
+.grid--child img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+
+.grid--child h2 {
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+}
+
+.grid--child p {
+line-height: 2em;
+    padding-left: 0.5em;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
+
+@media (min-width: 30rem) {
     .search-section {
         display: flex;
         justify-content: space-between;
@@ -61,34 +142,16 @@ body {
         cursor: pointer;
     }
 
-    .search-section--search-bar {
-        width: 30%;
-    }
-
-    .search-section--filter {
-        width: 10%;
-    }
-
-    .search-section--search-bar input,
-    #regions {
-        width: 100%;
-        background-color: var(--Blue-900);
-        border: none;
-        padding-block: 1.3em;
-        padding-inline: 1em;
-        margin-bottom: 2em;
-        border-radius: 5px;
-        color: var(--White);
-        box-shadow: 1px 1px 10px var(--Grey-950);
-    }
-
     .search-section--search-bar input {
         position: relative;
     }
 
-    .search-section--search-bar input::placeholder {
-        color: var(--White);
-        padding-left: 2.5em;
+    .search-section--search-bar {
+        width: 50%;
+    }
+
+    .search-section--filter {
+        width: 30%;
     }
 
     .search-section--search-bar i {
@@ -101,34 +164,12 @@ body {
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2em;
         margin-bottom: 2em;
     }
 
-    .grid--child {
-        width: 100%;
-        box-shadow: 1px 1px 10px var(--Grey-950);
-        border-radius: 5px;
-        padding-bottom: 2em;
-        animation: fade 2s;
-    }
-
-    .grid--child img {
-        width: 100%;
-        aspect-ratio: 2/1;
-        object-fit: cover;
-    }
-
-    .grid--child h2 {
-        margin-bottom: 1em;
-        padding-left: 0.5em;
-    }
-
-    .grid--child p {
-    line-height: 2em;
-        padding-left: 0.5em;
-    }
+    
     .gif {
         width: 100%;
         height: 100vh;
@@ -137,12 +178,40 @@ body {
     }
 }
 
-@keyframes fade {
-    from {
-        opacity: 0;
+@media (min-width: 50em) {
+    .hero--section h1 {
+        font-size: 1.5rem;
     }
-    to {
-        opacity: 1;
-        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        margin-bottom: 2em;
+    }
+
+    .search-section--search-bar {
+        width: 60%;
+    }
+
+    .search-section--filter {
+        width: 30%;
+    }
+}
+
+@media (min-width: 70em) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2em;
+        margin-bottom: 2em;
+    }
+
+    .search-section--search-bar {
+        width: 40%;
+    }
+
+    .search-section--filter {
+        width: 20%;
     }
 }

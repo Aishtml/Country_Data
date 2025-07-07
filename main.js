@@ -4,9 +4,9 @@
     const toggle = document.querySelector('.hero--section__toggle');
     const usersSearch = document.querySelector('.search-section--search-bar');
     const hero = document.querySelector('.hero');
+    const search = usersSearch.firstChild.nextElementSibling;
+    console.log(search)
     let isDark = true;
-
-   
 
     toggle.addEventListener('click', () => {
         if(isDark) {
@@ -48,7 +48,8 @@
                 
             });
 
-            region.addEventListener('change', (event) => {filterData(event, res)})
+            region.addEventListener('change', (event) => {filterData(event, res)});
+            search.addEventListener('click', (event) => {searchProperty(event, res)});
 
         } catch (error) {
             document.body.innerHTML = `<p>Error fetching data: ${error.message}</p>`;
@@ -80,5 +81,16 @@
         filteredData.forEach(data => renderHtml(data));
     }
 
-fetchData();
+    const searchProperty = (event, data) => {
+        const usersSearchValue = event.target.nextElementSibling.value;
+        cardParent.innerHTML = "";
+
+        const filteredSearch = data.filter(item => {
+            return usersSearchValue === "" || item.region === usersSearchValue || item.population == usersSearchValue || item.capital === usersSearchValue || item.name === usersSearchValue;
+        });
+
+        filteredSearch.forEach(data => renderHtml(data));
+    }
+
+    fetchData();
 })()
