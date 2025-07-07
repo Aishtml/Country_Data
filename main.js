@@ -86,7 +86,7 @@
         cardParent.innerHTML = "";
 
         const filteredSearch = data.filter(item => {
-            return usersSearchValue === "" || item.region === usersSearchValue || item.population == usersSearchValue || item.capital === usersSearchValue || item.name === usersSearchValue;
+            return usersSearchValue === "" || item.region === usersSearchValue || item.population === +usersSearchValue || item.capital === usersSearchValue || item.name === usersSearchValue;
         });
 
         filteredSearch.forEach(data => renderHtml(data));
