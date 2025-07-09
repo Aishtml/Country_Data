@@ -5,7 +5,6 @@
     const usersSearch = document.querySelector('.search-section--search-bar');
     const hero = document.querySelector('.hero');
     const search = usersSearch.firstChild.nextElementSibling;
-    console.log(search)
     let isDark = true;
 
     toggle.addEventListener('click', () => {
@@ -86,7 +85,9 @@
         cardParent.innerHTML = "";
 
         const filteredSearch = data.filter(item => {
-            return usersSearchValue === "" || item.region === usersSearchValue || item.population === +usersSearchValue || item.capital === usersSearchValue || item.name === usersSearchValue;
+            let dataSpilt = item.name.split(' ');
+            
+            return usersSearchValue === "" || item.region === usersSearchValue || item.population === +usersSearchValue || item.capital === usersSearchValue || dataSpilt.some(splited => splited.toLowerCase() === usersSearchValue.toLowerCase());
         });
 
         filteredSearch.forEach(data => renderHtml(data));

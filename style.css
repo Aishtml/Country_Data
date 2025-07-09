@@ -50,11 +50,12 @@ body {
     font-size: 1rem;
 }
 
-.hero--section__toggle {
+.hero--section__toggle,
+.search-section--search-bar {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 1em;
 }
 
 .search-section--search-bar input,
@@ -78,18 +79,18 @@ body {
     width: 50%;
 }
 
-.search-section--search-bar input::placeholder,
-.search-section--search-bar input {
-    color: var(--White);
-    padding-left: 2.5em;
+.search-section--search-bar i {
+    cursor: pointer;
+    border: 2px solid var(--Grey-950);
+    padding-block: 1.2em;
+    padding-inline: 1em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px var(--Grey-950);
 }
 
-.search-section--search-bar i {
-    position: absolute;
-    top: 22%;
-    left: 12%;
-    z-index: 1;
-    cursor: pointer;
+.search-section--search-bar input::placeholder {
+    color: var(--White);
 }
 
 .grid--child {
@@ -113,7 +114,7 @@ body {
 }
 
 .grid--child p {
-line-height: 2em;
+    line-height: 2em;
     padding-left: 0.5em;
 }
 
@@ -134,13 +135,7 @@ line-height: 2em;
         align-items: center;
     }
 
-    .hero--section__toggle,
-    .search-section--search-bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5em;
-    }
+    
 
     .hero--section__toggle i,
     .hero--section__toggle p {
@@ -157,14 +152,6 @@ line-height: 2em;
 
     .search-section--filter {
         width: 30%;
-    }
-
-    .search-section--search-bar i {
-        position: absolute;
-        top: 13%;
-        left: 11%;
-        z-index: 1;
-        cursor: pointer;
     }
 
     .grid {
@@ -219,12 +206,4 @@ line-height: 2em;
     .search-section--filter {
         width: 20%;
     }
-
-    .search-section--search-bar i {
-    position: absolute;
-    top: 13%;
-    left: 12%;
-    z-index: 1;
-    cursor: pointer;
-}
 }
