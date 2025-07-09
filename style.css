@@ -81,7 +81,6 @@ body {
 
 .search-section--search-bar i {
     cursor: pointer;
-    border: 2px solid var(--Grey-950);
     padding-block: 1em;
     padding-inline: 1em;
     margin-bottom: 2em;
